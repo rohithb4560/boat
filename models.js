@@ -22,6 +22,9 @@ const boatSchema = new mongoose.Schema({
     },
     noOfReviews:{
         type:Number
+    },
+    description:{
+        type:String
     }
 },{
    
