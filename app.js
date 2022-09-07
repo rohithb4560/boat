@@ -16,7 +16,7 @@ app.use(bodyParser.json())
 
 
 require("./mainRoutes")(app);
-app.listen(1234,()=>{
+app.listen(3333,()=>{
     connect()
     console.log("db connected")
 })
