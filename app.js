@@ -4,7 +4,9 @@ var app   = express()
 var cors = require('cors')
 var bodyParser = require('body-parser')
 app.use(cors({
-    origin:"*"
+    origin:"*",
+    optionsSuccessStatus: 200,
+
 }))
 
 const connect  = ()=>{
@@ -18,6 +20,10 @@ app.use(bodyParser.json())
 
 
 require("./mainRoutes")(app);
+app.get("/checking", (req,res) => {
+res.send("hello")
+
+})
 app.listen(3333,()=>{
     connect()
     console.log("db connected")
